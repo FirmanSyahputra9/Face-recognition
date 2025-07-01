@@ -35,8 +35,8 @@ Untuk menjalankan proyek ini, Anda perlu menginstal dependensi berikut:
 
 1. **Clone repository**:
    ```bash
-   git clone <URL_REPOSITORY_ANDA>
-   cd <NAMA_REPOSITORY_ANDA>
+   git clone <URL_REPOSITORY>
+   cd <NAMA_REPOSITORY>
    ```
 
 2. **Instal dependensi**:
