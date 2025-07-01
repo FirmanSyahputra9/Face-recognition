@@ -1,11 +1,11 @@
 # AI Face Recognition: Deteksi Emosi Wajah dengan HOG, Gabor, dan HOG+Gabor
 
-Proyek ini mengimplementasikan sistem deteksi emosi wajah menggunakan fitur **HOG** (Histogram of Oriented Gradients), **Gabor**, dan kombinasi **HOG+Gabor** dengan model neural network. Sistem ini dilatih untuk mengenali tujuh emosi wajah: *angry*, *disgust*, *fear*, *happy*, *neutral*, *sad*, dan *surprise*. Proyek ini mencakup dua bagian utama: pelatihan model (`hog_gabor_train.ipynb`) dan deteksi emosi secara real-time menggunakan webcam (`webcam.ipynb`).
+Proyek ini mengimplementasikan sistem deteksi emosi wajah menggunakan fitur **HOG** (Histogram of Oriented Gradients), **Gabor**, dan kombinasi **HOG+Gabor** dengan model neural network. Sistem ini dilatih untuk mengenali tujuh emosi wajah: *angry*, *disgust*, *fear*, *happy*, *neutral*, *sad*, dan *surprise*. Proyek ini mencakup dua bagian utama: pelatihan model (`train/`) dan deteksi emosi secara real-time menggunakan webcam (`webcam.ipynb`).
 
 ## Deskripsi Proyek
 
 Proyek ini terdiri dari dua notebook Jupyter:
-1. **`hog_gabor_train.ipynb`**: Melatih model untuk deteksi emosi menggunakan fitur HOG, Gabor, dan HOG+Gabor. Dataset yang digunakan berasal dari direktori `/kaggle/input/dataset-ekspresi/dataset-ekspresi`. Proses pelatihan melibatkan:
+1. **`train/`**: Melatih model untuk deteksi emosi menggunakan fitur HOG, Gabor, dan HOG+Gabor. Dataset yang digunakan berasal dari direktori `/kaggle/input/dataset-ekspresi/dataset-ekspresi`. Proses pelatihan melibatkan:
    - Augmentasi data (skala, rotasi, flipping, kecerahan, dan noise).
    - Ekstraksi fitur HOG dan Gabor.
    - Pelatihan model neural network dengan k-fold cross-validation.
@@ -50,12 +50,12 @@ Untuk menjalankan proyek ini, Anda perlu menginstal dependensi berikut:
    Simpan file-file ini di direktori proyek Anda.
 
 4. **Unduh notebook**:
-   Pastikan Anda memiliki file `hog_gabor_train.ipynb` dan `webcam.ipynb` di direktori proyek.
+   Pastikan Anda memiliki file `train/`, `dataset/` dan `webcam.ipynb` di direktori proyek.
 
 ## Penggunaan
 
 ### 1. Pelatihan Model
-- Buka `hog_gabor_train.ipynb` di Jupyter Notebook atau lingkungan seperti Kaggle.
+- Buka `train/` di Jupyter Notebook atau lingkungan seperti Kaggle.
 - Pastikan dataset tersedia di direktori `/kaggle/input/dataset-ekspresi/dataset-ekspresi` atau sesuaikan path di kode.
 - Jalankan semua sel untuk melatih model dan menyimpan file `.h5`.
 - Hasil pelatihan akan menampilkan *confusion matrix* dan grafik akurasi/loss.
@@ -77,7 +77,8 @@ Untuk melihat contoh hasil eksekusi kode, kunjungi notebook yang telah dijalanka
 
 ## Struktur Direktori
 ```plaintext
-├── hog_gabor_train.ipynb    # Notebook untuk melatih model
+├── dataset/    # Dataset yang dilatih
+├── train/    # Notebook untuk melatih model
 ├── webcam.ipynb             # Notebook untuk deteksi emosi dengan webcam
 ├── hog_emotion_model.h5     # Model HOG yang telah dilatih
 ├── gabor_emotion_model.h5   # Model Gabor yang telah dilatih
@@ -86,12 +87,11 @@ Untuk melihat contoh hasil eksekusi kode, kunjungi notebook yang telah dijalanka
 ```
 
 ## Catatan
-- Dataset ekspresi wajah tidak disertakan di repository ini. Anda perlu menyediakan dataset sendiri atau menggunakan dataset dari Kaggle.
+- Dataset ekspresi wajah tidak disertakan di repository ini. Anda dapat menggunakan dataset pada repository, menyediakan dataset sendiri atau menggunakan dataset dari Kaggle.
 - Pastikan webcam terhubung dan berfungsi dengan baik untuk menjalankan `webcam.ipynb`.
+- Webcam realtime hanya dapat berjalan di local (contohnya. VS Code)
 - Model HOG+Gabor umumnya memberikan akurasi lebih baik karena menggabungkan fitur tepi (HOG) dan tekstur (Gabor).
 
 ## Kontribusi
 Kontribusi untuk meningkatkan proyek ini sangat diterima! Silakan buat *pull request* atau laporkan *issue* di repository GitHub.
 
-## Lisensi
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
