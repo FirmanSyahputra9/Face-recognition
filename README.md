@@ -73,7 +73,7 @@ Untuk menjalankan proyek ini, Anda perlu menginstal dependensi berikut:
 
 ## Contoh Output
 Untuk melihat contoh hasil eksekusi kode, kunjungi notebook yang telah dijalankan di Kaggle:
-[Kaggle Notebook](https://www.kaggle.com/code/putekkk/notebookacf4bc6baa)
+[Kaggle Notebook](https://www.kaggle.com/code/putekkk/notebookacf4bc6baa](https://www.kaggle.com/code/putekkk/project-hog-gabor)
 
 ## Struktur Direktori
 ```plaintext
